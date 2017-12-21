@@ -1,0 +1,514 @@
+#-----------------------------------------------------------
+# Vivado v2017.3.1 (64-bit)
+# SW Build 2035080 on Fri Oct 20 14:20:00 MDT 2017
+# IP Build 2034413 on Fri Oct 20 15:56:25 MDT 2017
+# Start of session at: Mon Oct 30 03:29:25 2017
+# Process ID: 391
+# Current directory: /home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.runs/synth_1
+# Command line: vivado -log Wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Wrapper.tcl
+# Log file: /home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.runs/synth_1/Wrapper.vds
+# Journal file: /home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source Wrapper.tcl -notrace
+Command: synth_design -top Wrapper -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 415 
+WARNING: [Synth 8-2507] parameter declaration becomes local in Debouncer with formal parameter declaration list [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/new/Debouncer.v:24]
+WARNING: [Synth 8-2507] parameter declaration becomes local in Debouncer with formal parameter declaration list [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/new/Debouncer.v:25]
+WARNING: [Synth 8-2507] parameter declaration becomes local in Debouncer with formal parameter declaration list [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/new/Debouncer.v:26]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1257.395 ; gain = 84.277 ; free physical = 3034 ; free virtual = 13041
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Wrapper' [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/Wrapper.v:23]
+INFO: [Synth 8-638] synthesizing module 'Debouncer' [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/new/Debouncer.v:23]
+	Parameter FREQ bound to: 25000000 - type: integer 
+	Parameter WIDTH bound to: 4 - type: integer 
+	Parameter PERIOD bound to: 2500000 - type: integer 
+	Parameter WAIT_BTN_CHANGE bound to: 0 - type: integer 
+	Parameter WAIT_BTN_SETTLE bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Debouncer' (1#1) [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/new/Debouncer.v:23]
+INFO: [Synth 8-638] synthesizing module 'ClockDivider' [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/ClockDivider.v:23]
+	Parameter DIV bound to: 4 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'Counter' [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/Counter.v:22]
+	Parameter MAX_VAL bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Counter' (2#1) [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/Counter.v:22]
+INFO: [Synth 8-256] done synthesizing module 'ClockDivider' (3#1) [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/ClockDivider.v:23]
+INFO: [Synth 8-638] synthesizing module 'Counter__parameterized0' [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/Counter.v:22]
+	Parameter MAX_VAL bound to: 799 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Counter__parameterized0' (3#1) [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/Counter.v:22]
+INFO: [Synth 8-638] synthesizing module 'Counter__parameterized1' [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/Counter.v:22]
+	Parameter MAX_VAL bound to: 524 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Counter__parameterized1' (3#1) [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/Counter.v:22]
+INFO: [Synth 8-638] synthesizing module 'VGA_Controller' [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/VGA_Controller.v:23]
+INFO: [Synth 8-638] synthesizing module 'Mux' [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/Mux.v:23]
+	Parameter WIDTH bound to: 12 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Mux' (4#1) [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/Mux.v:23]
+INFO: [Synth 8-256] done synthesizing module 'VGA_Controller' (5#1) [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/VGA_Controller.v:23]
+INFO: [Synth 8-638] synthesizing module 'Game_Controller' [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/new/Game_Controller.v:23]
+	Parameter RED bound to: 2'b00 
+	Parameter GREEN bound to: 2'b01 
+	Parameter YELLOW bound to: 2'b10 
+	Parameter BLUE bound to: 2'b11 
+	Parameter SEQLEN_MAX bound to: 8 - type: integer 
+	Parameter Seq bound to: 16'b0010001110011100 
+	Parameter TIMER_MAX bound to: 12500000 - type: integer 
+	Parameter WAIT bound to: 0 - type: integer 
+	Parameter SIMON_TURN bound to: 1 - type: integer 
+	Parameter PLAYER_TURN bound to: 2 - type: integer 
+	Parameter WAIT_BTN_UP bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Game_Controller' (6#1) [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/new/Game_Controller.v:23]
+INFO: [Synth 8-638] synthesizing module 'Audio_Box' [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/new/Audio_Box.v:23]
+INFO: [Synth 8-638] synthesizing module 'ClockDivider__parameterized0' [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/ClockDivider.v:23]
+	Parameter DIV bound to: 227273 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'Counter__parameterized2' [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/Counter.v:22]
+	Parameter MAX_VAL bound to: 227272 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Counter__parameterized2' (6#1) [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/Counter.v:22]
+INFO: [Synth 8-256] done synthesizing module 'ClockDivider__parameterized0' (6#1) [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/ClockDivider.v:23]
+INFO: [Synth 8-638] synthesizing module 'ClockDivider__parameterized1' [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/ClockDivider.v:23]
+	Parameter DIV bound to: 606745 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'Counter__parameterized3' [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/Counter.v:22]
+	Parameter MAX_VAL bound to: 606744 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Counter__parameterized3' (6#1) [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/Counter.v:22]
+INFO: [Synth 8-256] done synthesizing module 'ClockDivider__parameterized1' (6#1) [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/ClockDivider.v:23]
+INFO: [Synth 8-638] synthesizing module 'ClockDivider__parameterized2' [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/ClockDivider.v:23]
+	Parameter DIV bound to: 360776 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'Counter__parameterized4' [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/Counter.v:22]
+	Parameter MAX_VAL bound to: 360775 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Counter__parameterized4' (6#1) [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/Counter.v:22]
+INFO: [Synth 8-256] done synthesizing module 'ClockDivider__parameterized2' (6#1) [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/ClockDivider.v:23]
+INFO: [Synth 8-638] synthesizing module 'ClockDivider__parameterized3' [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/ClockDivider.v:23]
+	Parameter DIV bound to: 303372 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'Counter__parameterized5' [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/Counter.v:22]
+	Parameter MAX_VAL bound to: 303371 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Counter__parameterized5' (6#1) [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/Counter.v:22]
+INFO: [Synth 8-256] done synthesizing module 'ClockDivider__parameterized3' (6#1) [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/ClockDivider.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Audio_Box' (7#1) [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/new/Audio_Box.v:23]
+WARNING: [Synth 8-350] instance 'AB' of module 'Audio_Box' requires 4 connections, but only 3 given [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/Wrapper.v:47]
+INFO: [Synth 8-638] synthesizing module 'Color_Box' [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/Color_Box.v:23]
+	Parameter BRIGHT_RED bound to: 12'b111100100010 
+	Parameter DIM_RED bound to: 12'b011100010001 
+	Parameter BRIGHT_GREEN bound to: 12'b001011110010 
+	Parameter DIM_GREEN bound to: 12'b000101110001 
+	Parameter BRIGHT_YELLOW bound to: 12'b111111110000 
+	Parameter DIM_YELLOW bound to: 12'b011101110000 
+	Parameter BRIGHT_BLUE bound to: 12'b001000101111 
+	Parameter DIM_BLUE bound to: 12'b000100010111 
+INFO: [Synth 8-256] done synthesizing module 'Color_Box' (8#1) [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/Color_Box.v:23]
+WARNING: [Synth 8-3848] Net AUD_SD in module/entity Wrapper does not have driver. [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/Wrapper.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Wrapper' (9#1) [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/Wrapper.v:23]
+WARNING: [Synth 8-3331] design Wrapper has unconnected port AUD_SD
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1283.645 ; gain = 110.527 ; free physical = 3051 ; free virtual = 13058
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1283.645 ; gain = 110.527 ; free physical = 3051 ; free virtual = 13058
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/constrs_1/imports/Simon_Says/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/constrs_1/imports/Simon_Says/Nexys4DDR_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/constrs_1/imports/Simon_Says/Nexys4DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1631.238 ; gain = 0.000 ; free physical = 2768 ; free virtual = 12770
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:31 . Memory (MB): peak = 1631.238 ; gain = 458.121 ; free physical = 2862 ; free virtual = 12865
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:31 . Memory (MB): peak = 1631.238 ; gain = 458.121 ; free physical = 2862 ; free virtual = 12865
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:31 . Memory (MB): peak = 1631.238 ; gain = 458.121 ; free physical = 2864 ; free virtual = 12866
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element Val_reg was removed.  [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/Counter.v:25]
+WARNING: [Synth 8-6014] Unused sequential element Val_reg was removed.  [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/Counter.v:25]
+INFO: [Synth 8-5544] ROM "State_next" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "State_next" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "SeqCnt_next" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element Val_reg was removed.  [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/Counter.v:25]
+WARNING: [Synth 8-6014] Unused sequential element Val_reg was removed.  [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/Counter.v:25]
+WARNING: [Synth 8-6014] Unused sequential element Val_reg was removed.  [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/Counter.v:25]
+WARNING: [Synth 8-6014] Unused sequential element Val_reg was removed.  [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/Counter.v:25]
+WARNING: [Synth 8-327] inferring latch for variable 'Btn_Out_reg' [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/new/Debouncer.v:45]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:31 . Memory (MB): peak = 1631.238 ; gain = 458.121 ; free physical = 2855 ; free virtual = 12857
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input     22 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   4 Input      1 Bit         XORs := 1     
++---Registers : 
+	               24 Bit    Registers := 1     
+	               22 Bit    Registers := 1     
+	               20 Bit    Registers := 1     
+	               19 Bit    Registers := 2     
+	               18 Bit    Registers := 1     
+	               10 Bit    Registers := 2     
+	                4 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   4 Input     24 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     22 Bit        Muxes := 2     
+	   2 Input     12 Bit        Muxes := 2     
+	   3 Input     12 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 3     
+	   3 Input     10 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 4     
+	   4 Input      4 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Debouncer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     22 Bit       Adders := 1     
++---Registers : 
+	               22 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     22 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module Counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+Module ClockDivider 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module Counter__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 1     
+Module Counter__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 1     
+Module Mux 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module Game_Controller 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               24 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input     24 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 1     
+Module Counter__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	               18 Bit    Registers := 1     
+Module ClockDivider__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module Counter__parameterized3 
+Detailed RTL Component Info : 
++---Registers : 
+	               20 Bit    Registers := 1     
+Module ClockDivider__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module Counter__parameterized4 
+Detailed RTL Component Info : 
++---Registers : 
+	               19 Bit    Registers := 1     
+Module ClockDivider__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module Counter__parameterized5 
+Detailed RTL Component Info : 
++---Registers : 
+	               19 Bit    Registers := 1     
+Module ClockDivider__parameterized3 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module Audio_Box 
+Detailed RTL Component Info : 
++---XORs : 
+	   4 Input      1 Bit         XORs := 1     
+Module Color_Box 
+Detailed RTL Component Info : 
++---Muxes : 
+	   3 Input     12 Bit        Muxes := 2     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   3 Input     10 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element HCounter/Val_reg was removed.  [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/Counter.v:25]
+WARNING: [Synth 8-6014] Unused sequential element VCounter/Val_reg was removed.  [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/Counter.v:25]
+WARNING: [Synth 8-6014] Unused sequential element AB/RedDivider/Divider_Counter/Val_reg was removed.  [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/Counter.v:25]
+WARNING: [Synth 8-6014] Unused sequential element AB/GreenDivider/Divider_Counter/Val_reg was removed.  [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/Counter.v:25]
+WARNING: [Synth 8-6014] Unused sequential element AB/YellowDivider/Divider_Counter/Val_reg was removed.  [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/Counter.v:25]
+WARNING: [Synth 8-6014] Unused sequential element AB/BlueDivider/Divider_Counter/Val_reg was removed.  [/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.srcs/sources_1/imports/new/Counter.v:25]
+WARNING: [Synth 8-3331] design Wrapper has unconnected port AUD_SD
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:32 . Memory (MB): peak = 1631.238 ; gain = 458.121 ; free physical = 2841 ; free virtual = 12843
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 1631.238 ; gain = 458.121 ; free physical = 2715 ; free virtual = 12718
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 1631.238 ; gain = 458.121 ; free physical = 2709 ; free virtual = 12712
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (CD/Divider_Counter/Val_reg[1]) is unused and will be removed from module Wrapper.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 1631.238 ; gain = 458.121 ; free physical = 2707 ; free virtual = 12709
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 1631.238 ; gain = 458.121 ; free physical = 2707 ; free virtual = 12709
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 1631.238 ; gain = 458.121 ; free physical = 2707 ; free virtual = 12709
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 1631.238 ; gain = 458.121 ; free physical = 2707 ; free virtual = 12709
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 1631.238 ; gain = 458.121 ; free physical = 2707 ; free virtual = 12709
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 1631.238 ; gain = 458.121 ; free physical = 2707 ; free virtual = 12709
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 1631.238 ; gain = 458.121 ; free physical = 2707 ; free virtual = 12709
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |CARRY4 |    32|
+|3     |LUT1   |     4|
+|4     |LUT2   |    22|
+|5     |LUT3   |    20|
+|6     |LUT4   |    39|
+|7     |LUT5   |    90|
+|8     |LUT6   |    96|
+|9     |FDCE   |    34|
+|10    |FDRE   |   129|
+|11    |LD     |     4|
+|12    |IBUF   |     6|
+|13    |OBUF   |    19|
+|14    |OBUFT  |     1|
++------+-------+------+
+
+Report Instance Areas: 
++------+----------------------+-----------------------------+------+
+|      |Instance              |Module                       |Cells |
++------+----------------------+-----------------------------+------+
+|1     |top                   |                             |   498|
+|2     |  AB                  |Audio_Box                    |   223|
+|3     |    BlueDivider       |ClockDivider__parameterized3 |    55|
+|4     |      Divider_Counter |Counter__parameterized5      |    54|
+|5     |    GreenDivider      |ClockDivider__parameterized1 |    56|
+|6     |      Divider_Counter |Counter__parameterized3      |    55|
+|7     |    RedDivider        |ClockDivider__parameterized0 |    56|
+|8     |      Divider_Counter |Counter__parameterized2      |    55|
+|9     |    YellowDivider     |ClockDivider__parameterized2 |    56|
+|10    |      Divider_Counter |Counter__parameterized4      |    55|
+|11    |  CD                  |ClockDivider                 |     4|
+|12    |    Divider_Counter   |Counter                      |     3|
+|13    |  DeBoun              |Debouncer                    |    64|
+|14    |  GC                  |Game_Controller              |   111|
+|15    |  HCounter            |Counter__parameterized0      |    26|
+|16    |  VCounter            |Counter__parameterized1      |    41|
++------+----------------------+-----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 1631.238 ; gain = 458.121 ; free physical = 2707 ; free virtual = 12709
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 15 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1631.238 ; gain = 110.527 ; free physical = 2758 ; free virtual = 12761
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 1631.246 ; gain = 458.121 ; free physical = 2759 ; free virtual = 12761
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 42 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  LD => LDCE: 4 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+53 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:42 . Memory (MB): peak = 1631.246 ; gain = 471.504 ; free physical = 2755 ; free virtual = 12758
+INFO: [Common 17-1381] The checkpoint '/home/brandon/Documents/Vivado_Projects/Simon_Says/Simon_Says.runs/synth_1/Wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Wrapper_utilization_synth.rpt -pb Wrapper_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.10 . Memory (MB): peak = 1655.250 ; gain = 0.000 ; free physical = 2755 ; free virtual = 12758
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 30 03:30:17 2017...
